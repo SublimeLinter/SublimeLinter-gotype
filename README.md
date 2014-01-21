@@ -14,10 +14,8 @@ Before using this plugin, you must ensure that `gotype` is installed on your sys
    go get code.google.com/p/go.tools/cmd/gotype
    ```
 
-1. Ensure that gotype is available via the SublimeLinter3 PATH. You may need to add your $GOPATH/bin directory manually via the SublimeLinter preferences.
-
 ### Linter configuration
-In order for `gotype` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
+In order for `gotype` to be executed by SublimeLinter, you must ensure that its path (`$GOPATH/bin`) is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
 Once you have installed and configured `gotype`, you can proceed to install the SublimeLinter-contrib-gotype plugin if it is not yet installed.
 
