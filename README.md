@@ -9,7 +9,8 @@ SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 
 ### Linter installation
 Before using this plugin, you must ensure that `gotype` is installed on your system. To install `gotype`, do the following:
 
-1. Install [gotype](http://godoc.org/code.google.com/p/go.tools/cmd/gotype).
+1. From the command line type the following:
+
    ```
    go get code.google.com/p/go.tools/cmd/gotype
    ```
