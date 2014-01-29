@@ -17,7 +17,7 @@ class Gotype(Linter):
 
     """Provides an interface to gotype."""
 
-    syntax = 'go'
+    syntax = ('go', 'gosublime-go')
     cmd = ('gotype', '-e')
     regex = r'^.+:(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
     tempfile_suffix = 'go'
