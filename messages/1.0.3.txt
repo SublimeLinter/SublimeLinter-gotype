@@ -1,0 +1,9 @@
+SublimeLinter-contrib-gotype 1.0.3
+----------------------------------
+Support for packages with multiple .go files.
+
+Error reporting should be improved for declarations
+that appear in other .go files in the same package.
+That means less junk error reporting!
+
+Thanks @jarcoal
