@@ -1,7 +1,7 @@
 SublimeLinter-contrib-gotype
 ================================
 
-[![Build Status](https://travis-ci.org/SirReal/SublimeLinter-contrib-gotype.png?branch=master)](https://travis-ci.org/SirReal/SublimeLinter-contrib-gotype)
+[![Build Status](https://travis-ci.org/sirreal/SublimeLinter-contrib-gotype.png?branch=master)](https://travis-ci.org/sirreal/SublimeLinter-contrib-gotype)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [gotype](http://godoc.org/code.google.com/p/go.tools/cmd/gotype). It will be used with files that have the “Go” syntax.
 
