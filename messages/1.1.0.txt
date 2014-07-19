@@ -1,0 +1,15 @@
+SublimeLinter-contrib-gotype 1.1.0
+----------------------------------
+Add custom GOPATH setting
+
+{
+    "SublimeLinter": {
+        "linters": {
+            "gotype": {
+                "gopath": "/custom/go/path:/another/go/path"
+            }
+        }
+    }
+}
+
+Thanks @jaschaephraim

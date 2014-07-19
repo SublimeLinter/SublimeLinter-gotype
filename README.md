@@ -34,6 +34,25 @@ To install via Package Control, do the following:
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
+In addition to the standard SublimeLinter settings, SublimeLinter-contrib-__linter__ provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
+
+|Setting|Description         |Inline Setting|Inline Override|
+|:------|:-------------------|:------------:|:-------------:|
+|gopath |Set a custom GOPATH |||
+
+### Settings example
+```json
+{
+    "SublimeLinter": {
+        "linters": {
+            "gotype": {
+                "gopath": "/custom/go/path:/another/go/path"
+            }
+        }
+    }
+}
+```
+
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
 
