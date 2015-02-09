@@ -14,7 +14,7 @@ Before using this plugin, you must ensure that `gotype` is installed on your sys
 1. From the command line type the following:
 
    ```
-   go get code.google.com/p/go.tools/cmd/gotype
+   go get -u golang.org/x/tools/cmd/gotype
    ```
 
 ### Linter configuration
