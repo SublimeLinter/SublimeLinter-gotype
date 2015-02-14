@@ -20,7 +20,8 @@ class Gotype(Linter):
     """Provides an interface to gotype."""
 
     syntax = ('go', 'gosublime-go')
-    cmd = ('gotype', '-e', '-a', '.')
+    cmd = None
+    executable = 'gotype'
     regex = r'^.+:(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
     error_stream = util.STREAM_STDERR
 
@@ -35,7 +36,7 @@ class Gotype(Linter):
             else:
                 self.env = {'GOPATH': gopath}
 
-    def run(self, cmd, code):
-        """Copy package files to temp dir."""
-        files = [f for f in listdir(dirname(self.filename)) if f[-3:] == '.go']
-        return self.tmpdir(cmd, files, code)
+    def cmd(self):
+        """Generate the linter command string"""
+        return [self.executable_path, '-e', '-a', '-r='+self.filename, '.')
+
