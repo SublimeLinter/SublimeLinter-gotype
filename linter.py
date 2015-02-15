@@ -45,13 +45,6 @@ class GoType(Linter):
         return match, line, col, error, warning, message, near
 
     def cmd(self):
-        gopath = self.get_view_settings().get('gopath')
-        if gopath:
-            if self.env:
-                self.env['GOPATH'] = gopath
-            else:
-                self.env = {'GOPATH': gopath}
-
         """Generate the linter command string"""
         return [self.executable_path, '-e', '-a', '-r='+path.basename(self.filename), '.']
 
