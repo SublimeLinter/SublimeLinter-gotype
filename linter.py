@@ -16,7 +16,7 @@ from SublimeLinter.lint import Linter, util
 import re
 
 
-class GoType(Linter):
+class Gotype(Linter):
 
     """Provides an interface to gotype."""
 
@@ -26,6 +26,17 @@ class GoType(Linter):
     regex = r'^.+:(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
     fileRegex = r'^(?P<file>[^:]+):.+'
     error_stream = util.STREAM_STDERR
+
+    def __init__(self, view, syntax):
+        """Initialize and load GOPATH from settings if present."""
+        super(Gotype, self).__init__(view, syntax)
+
+        gopath = self.get_view_settings().get('gopath')
+        if gopath:
+            if self.env:
+                self.env['GOPATH'] = gopath
+            else:
+                self.env = {'GOPATH': gopath}
 
     def split_match(self, match):
         """
