@@ -11,7 +11,6 @@
 """This module exports the Gotype plugin class."""
 
 from os import path
-from os.path import dirname
 from SublimeLinter.lint import Linter, util
 import re
 
@@ -44,18 +43,15 @@ class Gotype(Linter):
 
         We override this method so that errors not pertaining to the file
         being edited are not returned.
-
         """
-
         match, line, col, error, warning, message, near = super().split_match(match)
 
         filename = path.basename(self.filename)
-        if re.match(self.fileRegex,match.group(0)).group(1) != filename:
+        if re.match(self.fileRegex, match.group(0)).group(1) != filename:
             return None, 0, 0, '', '', '', ''
 
         return match, line, col, error, warning, message, near
 
     def cmd(self):
-        """Generate the linter command string"""
+        """Generate the linter command string."""
         return [self.executable_path, '-e', '-a', '-r='+path.basename(self.filename), '.']
-
