@@ -21,7 +21,7 @@ class Gotype(Linter):
 
     syntax = ('go', 'gosublime-go')
     executable = "gotype"
-    regex = r'^.+:(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
+    regex = r'(?P<filename>^.+):(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
     error_stream = util.STREAM_STDERR
 
     def __init__(self, view, syntax):
@@ -37,3 +37,9 @@ class Gotype(Linter):
 
     def cmd(self):
         return [self.executable_path, "-e", "-a", dirname(self.filename)]
+
+    def split_match(self, match):
+        match, line, col, error, warning, message, near = super().split_match(match)
+        if match.group("filename") != self.filename:
+            return None, None, None, None, None, '', None
+        return match, line, col, error, warning, message, near
