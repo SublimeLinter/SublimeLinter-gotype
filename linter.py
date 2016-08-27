@@ -10,13 +10,11 @@
 
 """This module exports the Gotype plugin class."""
 
-from os import listdir
 from os.path import dirname
 from SublimeLinter.lint import Linter, util
 
 
 class Gotype(Linter):
-
     """Provides an interface to gotype."""
 
     syntax = ('go', 'gosublime-go')
@@ -36,9 +34,11 @@ class Gotype(Linter):
                 self.env = {'GOPATH': gopath}
 
     def cmd(self):
+        """Return the command line to run."""
         return [self.executable_path, "-e", "-a", dirname(self.filename)]
 
     def split_match(self, match):
+        """Process each match modifying or discarding it."""
         match, line, col, error, warning, message, near = super().split_match(match)
         if match.group("filename") != self.filename:
             return None, None, None, None, None, '', None
