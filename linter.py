@@ -35,7 +35,7 @@ class Gotype(Linter):
 
     def cmd(self):
         """Return the command line to run."""
-        return [self.executable_path, "-e", "-a", dirname(self.filename)]
+        return [self.executable_path, "-e", dirname(self.filename)]
 
     def split_match(self, match):
         """Process each match modifying or discarding it."""
