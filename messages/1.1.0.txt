@@ -1,4 +1,4 @@
-SublimeLinter-contrib-gotype 1.1.0
+SublimeLinter-gotype 1.1.0
 ----------------------------------
 Add custom GOPATH setting
 

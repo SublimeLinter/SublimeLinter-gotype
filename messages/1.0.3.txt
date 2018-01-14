@@ -1,4 +1,4 @@
-SublimeLinter-contrib-gotype 1.0.3
+SublimeLinter-gotype 1.0.3
 ----------------------------------
 Support for packages with multiple .go files.
 

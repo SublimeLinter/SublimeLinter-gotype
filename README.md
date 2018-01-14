@@ -1,7 +1,7 @@
-SublimeLinter-contrib-gotype
+SublimeLinter-gotype
 ================================
 
-[![Build Status](https://travis-ci.org/sirreal/SublimeLinter-contrib-gotype.png?branch=master)](https://travis-ci.org/sirreal/SublimeLinter-contrib-gotype)
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-gotype.png?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-gotype)
 
 This linter plugin for [SublimeLinter][docs] provides an interface to [gotype](http://godoc.org/code.google.com/p/go.tools/cmd/gotype). It will be used with files that have the “Go” syntax.
 
@@ -20,7 +20,7 @@ Before using this plugin, you must ensure that `gotype` is installed on your sys
 ### Linter configuration
 In order for `gotype` to be executed by SublimeLinter, you must ensure that its path (`$GOPATH/bin`) is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
-Once you have installed and configured `gotype`, you can proceed to install the SublimeLinter-contrib-gotype plugin if it is not yet installed.
+Once you have installed and configured `gotype`, you can proceed to install the SublimeLinter-gotype plugin if it is not yet installed.
 
 ### Plugin installation
 Please use [Package Control][pc] to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
@@ -29,12 +29,12 @@ To install via Package Control, do the following:
 
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
-1. When the plugin list appears, type `gotype`. Among the entries you should see `SublimeLinter-contrib-gotype`. If that entry is not highlighted, use the keyboard or mouse to select it.
+1. When the plugin list appears, type `gotype`. Among the entries you should see `SublimeLinter-gotype`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
 For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
 
-In addition to the standard SublimeLinter settings, SublimeLinter-contrib-__linter__ provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
+In addition to the standard SublimeLinter settings, SublimeLinter-gotype provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
 
 |Setting|Description         |Inline Setting|Inline Override|
 |:------|:-------------------|:------------:|:-------------:|
