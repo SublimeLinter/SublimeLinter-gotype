@@ -3,7 +3,7 @@ SublimeLinter-gotype
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-gotype.png?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-gotype)
 
-This linter plugin for [SublimeLinter][docs] provides an interface to [gotype](http://godoc.org/code.google.com/p/go.tools/cmd/gotype). It will be used with files that have the “Go” syntax.
+This linter plugin for [SublimeLinter][docs] provides an interface to [gotype](https://godoc.org/golang.org/x/tools/cmd/gotype). It will be used with files that have the “Go” syntax.
 
 ## Installation
 SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here][installation].
@@ -30,28 +30,6 @@ To install via Package Control, do the following:
 1. Within Sublime Text, bring up the [Command Palette][cmd] and type `install`. Among the commands you should see `Package Control: Install Package`. If that command is not highlighted, use the keyboard or mouse to select it. There will be a pause of a few seconds while Package Control fetches the list of available plugins.
 
 1. When the plugin list appears, type `gotype`. Among the entries you should see `SublimeLinter-gotype`. If that entry is not highlighted, use the keyboard or mouse to select it.
-
-## Settings
-For general information on how SublimeLinter works with settings, please see [Settings][settings]. For information on generic linter settings, please see [Linter Settings][linter-settings].
-
-In addition to the standard SublimeLinter settings, SublimeLinter-gotype provides its own settings. Those marked as “Inline Setting” or “Inline Override” may also be [used inline][inline-settings].
-
-|Setting|Description         |Inline Setting|Inline Override|
-|:------|:-------------------|:------------:|:-------------:|
-|gopath |Set a custom GOPATH |||
-
-### Settings example
-```json
-{
-    "SublimeLinter": {
-        "linters": {
-            "gotype": {
-                "gopath": "/custom/go/path:/another/go/path"
-            }
-        }
-    }
-}
-```
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
