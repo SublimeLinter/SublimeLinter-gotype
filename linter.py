@@ -1,33 +1,19 @@
-#
-# linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
-#
-# Written by Jon Surrell
-# Copyright (c) 2014 Jon Surrell
-#
-# Wonyoung Ju make it compatible with SublimeLinter4 at 2018.03
-#
-# License: MIT
-#
-
-"""This module exports the GotypeLinter plugin class."""
-
 import os
 from os.path import dirname
 import logging
 
-from SublimeLinter.lint import Linter, util  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
+from SublimeLinter.lint import Linter, util
 
 
 logger = logging.getLogger(__name__)
 
 
 class GotypeLinter(Linter):
-    """Provides an interface to gotype."""
-
-    syntax = ('go', 'gosublime-go')
     executable = "gotype"
     regex = r'(?P<filename>^.+):(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
+    defaults = {
+        'selector': 'source.go'
+    }
 
     def cmd(self):
         """Return the command line to run."""
