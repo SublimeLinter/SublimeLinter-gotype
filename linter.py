@@ -2,7 +2,7 @@ from SublimeLinter.lint import Linter, util
 
 
 class Gotype(Linter):
-    cmd = ('gotype', '-e', '${file}')
+    cmd = ('gotype', '-e', '${file_path}')
     regex = r'(?P<filename>^.+):(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
     error_stream = util.STREAM_STDERR
     defaults = {
