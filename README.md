@@ -3,20 +3,25 @@ SublimeLinter-gotype
 
 [![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-gotype.png?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-gotype)
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [gotype](http://godoc.org/code.google.com/p/go.tools/cmd/gotype). It will be used with files that have the “Go” syntax.
+This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [gotype](http://godoc.org/code.google.com/p/go.tools/cmd/gotype).
+It will be used with files that have the "Go" syntax.
+
 
 ## Installation
+
 SublimeLinter must be installed in order to use this plugin. 
 
 Please install via [Package Control](https://packagecontrol.io).
 
-Before using this plugin, you must ensure that `gotype` is installed on your system. To install `gotype`, do the following:
+Before using this plugin, ensure that `gotype` is installed on your system.
+To install `gotype`, do the following:
 
 1. From the command line type the following:
 
    ```
    go get -u golang.org/x/tools/cmd/gotype
    ```
+
 
 ## Settings
 
