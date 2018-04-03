@@ -2,11 +2,13 @@ from SublimeLinter.lint import Linter, util
 
 
 class Gotype(Linter):
-    cmd = ('gotype', '-e', '${file_path}')
+    cmd = 'gotype'
     regex = r'(?P<filename>^.+):(?P<line>\d+):(?P<col>\d+):\s+(?P<message>.+)'
     error_stream = util.STREAM_STDERR
     defaults = {
-        'selector': 'source.go'
+        'selector': 'source.go',
+        # we want auto-substitution of the dirname of the file, but `cmd` does not support that yet
+        '-e:': '${file_path}'
     }
 
     def split_match(self, match):
