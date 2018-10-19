@@ -1,5 +1,4 @@
 from SublimeLinter.lint import Linter, util
-from SublimeLinter.lint.linter import substitute_variables
 
 
 class Gotype(Linter):
