@@ -12,11 +12,5 @@ class Gotype(Linter):
     }
 
     def split_match(self, match):
-        """Process each match modifying or discarding it."""
-        match, line, col, error, warning, message, near = super().split_match(match)
-        if match.group("filename") != self.filename:
-            return None, None, None, None, None, '', None
-        return match, line, col, error, warning, message, near
-
-    def finalize_cmd(self, cmd, context, **kwargs):
-        return substitute_variables(context, cmd)
+        if match.group('filename') == self.filename:
+            return super().split_match(match)
